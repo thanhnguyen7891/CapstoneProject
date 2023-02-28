@@ -19,8 +19,8 @@ public class Chat {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private String from_user;
-	private String to_user;
+	private String fromUser;
+	private String toUser;
 	private String message;
 	private String datetime;
 

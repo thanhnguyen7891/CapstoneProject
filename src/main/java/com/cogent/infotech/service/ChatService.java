@@ -36,4 +36,9 @@ public class ChatService {
 		return chatRepository.save(chat);
 	}
 
+	public List<Chat> getBetween(String sender, String receiver) {
+		// TODO Auto-generated method stub
+		return (List<Chat>) chatRepository.findByFromUserAndToUser(sender, receiver);
+	}
+
 }

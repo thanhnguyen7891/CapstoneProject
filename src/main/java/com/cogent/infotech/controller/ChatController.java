@@ -39,4 +39,9 @@ public class ChatController {
 		return chatService.create(chat);
 	}
 	
+	@GetMapping("/chat/getmessagesbyuser/{sender}/{receiver}")
+	public List<Chat> getmessagesbyuser(@PathVariable String sender, @PathVariable String receiver){
+		return chatService.getBetween(sender, receiver);
+	}
+	
 }

@@ -32,11 +32,11 @@ public class Question {
 	private String topic;
 	private String title;
 	
-	@OneToMany(mappedBy = "question")
+	@OneToMany(mappedBy = "question", fetch = FetchType.EAGER)
 	@JsonIgnore
 	private List<Answer> answers;
 
-	private String qcreated_by;
+	private String created_by;
 	
-	private String qapproved_by;
+	private String approved_by;
 }
